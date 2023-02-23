@@ -17,6 +17,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 #ifdef _WIN32
+#define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #define WIN32_LEAN_AND_MEAN
 #define VC_EXTRALEAN
 #define NOMINMAX
@@ -45,6 +46,7 @@
 #include <cstring>
 #ifndef NL_NO_STD_FILESYSTEM
 #include <filesystem>
+#include <experimental/filesystem>
 namespace sys = std::experimental::filesystem;
 #else
 #include <boost/filesystem.hpp>
